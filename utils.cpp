@@ -17,12 +17,11 @@ void loadingAnimation(int duration_ms) {
 		std::cout << "\rLoading " << spinner[i % spinnerLength] << std::flush;
 		delay(100);
 	}
-	//std::cout << "\rLoading Ended!" << std::endl;
-	std::cout << "\r" << std::endl;
+	std::cout << "\r                 \r" << std::endl; // adjust spaces to the max length of loading X
 }
 
 void waitForEnter() {
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	std::cout << std::endl << "Press Enter to continue...";
 	std::cin.get();
 }
