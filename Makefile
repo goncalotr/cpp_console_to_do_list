@@ -1,7 +1,7 @@
 NAME		= todo_list
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I. #I. flag -> include current directory
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++11 -I. #I. flag -> include current directory
 
 RM			= rm -f
 
@@ -11,6 +11,7 @@ endif
 
 # --- Files ---
 SRCS		= main.cpp \
+			  utils.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

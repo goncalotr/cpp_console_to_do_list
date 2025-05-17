@@ -30,6 +30,7 @@ int main (int argc, char** argv) {
 		switch (choice) {
 			case 1:
 				std::cout  << "Adding a new task..." << std::endl;
+				delay(3000);
 				break;
 
 			case 2:
