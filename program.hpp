@@ -6,7 +6,7 @@
 #include <iostream>		// console input and output
 #include <string>		// string data type
 #include <vector>		// dynamic arrays (vectors)
-#include <cstdlib>		// system()
+#include <cstdlib>		// system() _WIN32
 
 //#include <chrono>		// time c++11
 //#include <thread>		// time c++11
@@ -19,5 +19,6 @@
 void delay(int ms);
 void loadingAnimation(int duration_ms);
 void waitForEnter();
+void clearConsole();
 
 #endif

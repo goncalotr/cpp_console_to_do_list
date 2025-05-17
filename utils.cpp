@@ -22,6 +22,15 @@ void loadingAnimation(int duration_ms) {
 
 void waitForEnter() {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	std::cout << "Press Enter to continue...";
+	std::cout << std::endl << "Press Enter to continue...";
 	std::cin.get();
+}
+
+int clearConsole() {
+	#ifdef _WIN32
+		system("cls");
+	#else
+		system("clear");
+	#endif
+	return 0;
 }
