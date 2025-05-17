@@ -17,7 +17,8 @@ void loadingAnimation(int duration_ms) {
 		std::cout << "\rLoading " << spinner[i % spinnerLength] << std::flush;
 		delay(100);
 	}
-	std::cout << "\rLoading Ended!" << std::endl;
+	//std::cout << "\rLoading Ended!" << std::endl;
+	std::cout << "\r" << std::endl;
 }
 
 void waitForEnter() {

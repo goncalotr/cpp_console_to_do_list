@@ -39,26 +39,43 @@ int main (int argc, char** argv) {
 			case 1: {
 				std::cout  << "Enter task description: ";
 				std::string description;
-				std::getline(std::cin, description);
 
+				std::getline(std::cin, description);
 				if (description.empty()) {
 					std::cout << "Task description cannot be empty. \n";
 				} else {
-
+					Task newTask(description);
+					tasks.push_back(newTask);
 				}
-				std::cout << "Task Added!" << std::endl;
+				std::cout << "Task Added: \"" << description << "\"" << std::endl;
 				break;
 			}
 			case 2:
 				std::cout  << " --- Your Tasks --- " << std::endl;
-				//loadingAnimation(500);
-				//if (tasks.empty()) {
-				//	std::cout << "No tasks yet!" << std::endl;
-				//} else {
-				//
-				//}
+				loadingAnimation(500);
+
+				if (tasks.empty()) {
+					std::cout << "No tasks yet!" << std::endl;
+				} else {
+
+					for (size_t i = 0; i < tasks.size(); ++i) {
+						// getting reference to task to not copy it
+						// const because we are only reading not changing
+						const Task& currentTask = tasks[i];
+						std::cout << (i + 1) << ". ";
+
+						if (currentTask.getCompleted()) { 
+							std::cout << "✅ ";
+						} else {
+							std::cout << "❌ ";
+						}
+
+						std::cout << currentTask.getDescription() << std::endl;
+					}
+				}
 
 				std::cout  << " ------------------ " << std::endl;
+				waitForEnter();
 				break;
 
 			case 3:

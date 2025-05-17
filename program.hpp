@@ -15,12 +15,12 @@
 
 #include "Task.hpp"
 
-// --- main ---
+// --- Functions ---
 
-// --- Utils ---
-void delay(int ms);
-void loadingAnimation(int duration_ms);
-void waitForEnter();
-int clearConsole();
+// Utils
+void		delay(int ms);
+void		loadingAnimation(int duration_ms);
+void		waitForEnter();
+int			clearConsole();
 
 #endif
