@@ -2,7 +2,7 @@
 #ifndef PROGRAM_H
 #define PROGRAM_H
 
-// --- Libraries ---
+// --- Includes ---
 #include <iostream>		// console input and output
 #include <string>		// string data type
 #include <vector>		// dynamic arrays (vectors)
@@ -12,6 +12,8 @@
 //#include <thread>		// time c++11
 #include <ctime>
 #include <limits>
+
+#include "Task.hpp"
 
 // --- main ---
 

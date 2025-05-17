@@ -11,6 +11,7 @@ endif
 
 # --- Files ---
 SRCS		= main.cpp \
+			  Task.cpp \
 			  utils.cpp
 
 OBJS		= $(SRCS:.cpp=.o)

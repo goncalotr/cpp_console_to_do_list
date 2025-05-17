@@ -7,28 +7,20 @@
 
 class Task {
 	public:
-		// constructor
-		Task(const std::string& desc) : description(desc), completed(false);
-		
-		// getters
+		// Constructor declaration
+		Task(const std::string& desc);
+
+		// Method declarations - getters
 		// const at end -> this method doesn't modify the object's state
-		std::string getDescription() const {
-			return description;
-		} 
+		std::string getDescription() const;
+		bool getCompleted() const;
 
-		bool isCompletedd() const {
-			return completed;
-		}
-
-		void markComplete() {
-			completed = true;
-		}
-
-		void markIncomplete() {
-			completed = false;
-		}
+		// Method declarations - setters
+		void setComplete();
+		void setIncomplete();
 
 	private:
+		// Member variables
 		std::string description;	// text of the task
 		bool completed;				// true if task is done
 };

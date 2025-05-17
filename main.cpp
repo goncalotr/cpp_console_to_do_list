@@ -18,32 +18,59 @@ int main (int argc, char** argv) {
 	(void) argc;
 	(void) argv;
 
+	std::vector<Task> tasks;
+
 	int choice;
 
 	do {
 		std::system("clear");
 		displayMenu();
 		std::cin >> choice;
+		if (std::cin.fail()) {
+			std::cout << "Invalid input. Please enter a number. \n";
+			std::cin.clear(); // clear error flags
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			choice = -1;
+			continue;
+		}
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 		switch (choice) {
-			case 1:
-				std::cout  << "Adding a new task..." << std::endl;
-				delay(3000);
-				break;
+			case 1: {
+				std::cout  << "Enter task description: ";
+				std::string description;
+				std::getline(std::cin, description);
 
+				if (description.empty()) {
+					std::cout << "Task description cannot be empty. \n";
+				} else {
+
+				}
+				std::cout << "Task Added!" << std::endl;
+				break;
+			}
 			case 2:
-				std::cout  << "Viewing tasks" << std::endl;
-				loadingAnimation(3000);
-				waitForEnter();
+				std::cout  << " --- Your Tasks --- " << std::endl;
+				//loadingAnimation(500);
+				//if (tasks.empty()) {
+				//	std::cout << "No tasks yet!" << std::endl;
+				//} else {
+				//
+				//}
+
+				std::cout  << " ------------------ " << std::endl;
 				break;
 
 			case 3:
 				std::cout  << "Marking tasks as completed" << std::endl;
+				loadingAnimation(2000);
+				waitForEnter();
 				break;
 
 			case 4:
 				std::cout  << "Removing task..." << std::endl;
+				loadingAnimation(2000);
+				waitForEnter();
 				break;
 
 			case 5:
