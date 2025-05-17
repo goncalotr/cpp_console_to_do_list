@@ -35,6 +35,8 @@ int main (int argc, char** argv) {
 
 			case 2:
 				std::cout  << "Viewing tasks" << std::endl;
+				loadingAnimation(3000);
+				std::cin.ignore(); // wait for Enter
 				break;
 
 			case 3:
@@ -54,7 +56,7 @@ int main (int argc, char** argv) {
 				break;
 
 			case 0:
-				std::cout << "Exiting program. Goodbye!" << std::endl;
+				std::cout << "Exiting program." << std::endl;
 				break;
 
 			default:
