@@ -1,5 +1,5 @@
 
-#include <program.hpp>
+#include "program.hpp"
 
 void displayMenu() {
 	std::cout << std::endl << "--- To-Do List Menu ---"<< std::endl;
@@ -23,5 +23,43 @@ int main (int argc, char** argv) {
 	do {
 		displayMenu();
 		std::cin >> choice;
-	}
+
+		//std::cin.ignore(std::numeric_limits<std::streamize>::max(), '\n');
+
+		switch (choice) {
+			case 1:
+				std::cout  << "Adding a new task..." << std::endl;
+				break;
+
+			case 2:
+				std::cout  << "Viewing tasks" << std::endl;
+				break;
+
+			case 3:
+				std::cout  << "Marking tasks as completed" << std::endl;
+				break;
+
+			case 4:
+				std::cout  << "Removing task..." << std::endl;
+				break;
+
+			case 5:
+				std::cout << "Saving tasks..." << std::endl;
+				break;
+
+			case 6:
+				std::cout << "Loading tasks..." << std::endl;
+				break;
+
+			case 0:
+				std::cout << "Exiting program. Goodbye!" << std::endl;
+				break;
+
+			default:
+				std::cout << "Invalid choice. Please try again." << std::endl;
+
+		}
+	} while (choice != 0);
+
+	return 0;
 }
