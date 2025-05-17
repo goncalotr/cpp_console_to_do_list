@@ -21,6 +21,7 @@ int main (int argc, char** argv) {
 	int choice;
 
 	do {
+		std::system("clear");
 		displayMenu();
 		std::cin >> choice;
 

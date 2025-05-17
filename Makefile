@@ -2,6 +2,7 @@ NAME		= todo_list
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I. #I. flag -> include current directory
+
 RM			= rm -f
 
 ifdef DEBUG
