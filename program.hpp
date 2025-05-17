@@ -18,5 +18,6 @@
 // --- Utils ---
 void delay(int ms);
 void loadingAnimation(int duration_ms);
+void waitForEnter();
 
 #endif

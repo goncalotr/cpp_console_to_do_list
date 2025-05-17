@@ -24,8 +24,7 @@ int main (int argc, char** argv) {
 		std::system("clear");
 		displayMenu();
 		std::cin >> choice;
-
-		//std::cin.ignore(std::numeric_limits<std::streamize>::max(), '\n');
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 		switch (choice) {
 			case 1:
@@ -36,7 +35,7 @@ int main (int argc, char** argv) {
 			case 2:
 				std::cout  << "Viewing tasks" << std::endl;
 				loadingAnimation(3000);
-				std::cin.ignore(); // wait for Enter
+				waitForEnter();
 				break;
 
 			case 3:

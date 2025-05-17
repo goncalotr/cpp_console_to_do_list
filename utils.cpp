@@ -17,5 +17,11 @@ void loadingAnimation(int duration_ms) {
 		std::cout << "\rLoading " << spinner[i % spinnerLength] << std::flush;
 		delay(100);
 	}
-	std::cout << "\r Loading Ended!" << std::endl;
+	std::cout << "\rLoading Ended!" << std::endl;
+}
+
+void waitForEnter() {
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::cout << "Press Enter to continue...";
+	std::cin.get();
 }
