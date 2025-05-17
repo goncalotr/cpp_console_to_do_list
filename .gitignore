@@ -1,0 +1,11 @@
+# Ignore object files
+*.o
+
+# Ignore executable files (no extension, typical on Unix)
+todo_list
+main
+a.out
+
+# Ignore build folders
+#build/
+#bin/
