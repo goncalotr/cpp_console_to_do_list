@@ -10,9 +10,9 @@ ifdef DEBUG
 endif	
 
 # --- Files ---
-SRCS		= main.cpp \
-			  Task.cpp \
-			  utils.cpp
+SRCS		= src/main.cpp \
+			  src/Task.cpp \
+			  src/utils.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

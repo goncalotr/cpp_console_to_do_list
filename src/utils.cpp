@@ -1,5 +1,5 @@
 
-#include "program.hpp"
+#include "./../inc/program.hpp"
 
 void delay(int ms) {
 	clock_t end_time = clock() + ms * CLOCKS_PER_SEC / 1000;

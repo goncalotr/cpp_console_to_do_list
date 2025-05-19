@@ -1,5 +1,5 @@
 
-#include "program.hpp"
+#include "./../inc/program.hpp"
 
 void displayMenu() {
 	std::cout << std::endl << "--- To-Do List Menu ---"<< std::endl;
@@ -80,8 +80,26 @@ int main (int argc, char** argv) {
 				break;
 
 			case 3:
-				std::cout  << "Marking tasks as completed" << std::endl;
-				loadingAnimation(2000);
+				if (tasks.empty()) {
+					std::cout << "No tasks to mark. Add some tasks first!\n";
+					waitForEnter();
+					break;
+				}
+
+				std::cout << "\n--- Mark Task as Completed ---\n";
+				for (size_t i = 0; i < tasks.size(); ++i) {
+					const Task currentTask = tasks[i];
+					std::cout << (i + 1) << ". ";
+					if (currentTask.getCompleted()) {
+						std::cout << "✅ ";
+					} else {
+						std::cout << "❌ ";
+					}
+					std::cout << currentTask.getDescription() << std::endl;
+				}
+				std::cout << "-----------------------------\n";
+
+
 				waitForEnter();
 				break;
 

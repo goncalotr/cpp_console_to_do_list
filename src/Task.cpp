@@ -1,6 +1,6 @@
 // Definition (implementation) of task class
 
-#include "Task.hpp"
+#include "./../inc/Task.hpp"
 
 Task::Task(const std::string& desc) : description(desc), completed(false) {
 	// empty 
