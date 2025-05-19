@@ -1,7 +1,7 @@
 NAME		= todo_list
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++11 -I. #I. flag -> include current directory
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++11 -Iinc/ #I. flag -> include current directory
 
 RM			= rm -f
 
@@ -38,6 +38,6 @@ debug:
 	CXXFLAGS += -g -fsanitize=address
 	$(CXX) $(CXXFLAGS) -O $(NAME) $(SRCS)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re debug
 
 #.SILENT
