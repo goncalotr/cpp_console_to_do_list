@@ -10,6 +10,7 @@ void displayMenu() {
 	std::cout << std::endl << "5. Save Tasks to File"<< std::endl;
 	std::cout << std::endl << "6. Load Tasks to File Task"<< std::endl;
 	std::cout << std::endl << "0. Exit" << std::endl;
+	std::cout << std::endl << "--- Menu End ---"<< std::endl << std::endl;
 	std::cout << std::endl << "Enter your choice: ";
 }
 
