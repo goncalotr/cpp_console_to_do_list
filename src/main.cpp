@@ -1,3 +1,4 @@
+// main.cpp
 
 #include "./../inc/program.hpp"
 
@@ -141,6 +142,14 @@ int main (int argc, char** argv) {
 				break;
 
 			case 4:
+
+				// no tasks
+				if (tasks.empty()) {
+					std::cout << "No tasks to mark. Add some tasks first!\n";
+					waitForEnter();
+					break;
+				}
+
 				std::cout  << "Removing task..." << std::endl;
 				loadingAnimation(2000);
 				waitForEnter();
