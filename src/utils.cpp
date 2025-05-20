@@ -35,3 +35,20 @@ int clearConsole() {
 	#endif
 	return 0;
 }
+
+void displayTasks(const std::vector<Task>& taskList) {
+	std::cout << "\n--- Current Task List ---\n";
+
+	for (size_t i = 0; i < taskList.size(); ++i) {
+		const Task currentTask = taskList[i];
+		std::cout << (i + 1) << ". ";
+		if (currentTask.getCompleted()) {
+			std::cout << "✅ ";
+		} else {
+			std::cout << "❌ ";
+		}
+		std::cout << currentTask.getDescription() << std::endl;
+	}
+
+	std::cout << "\n-------------------------\n";
+}

@@ -22,5 +22,6 @@ void		delay(int ms);
 void		loadingAnimation(int duration_ms);
 void		waitForEnter();
 int			clearConsole();
+void		displayTasks(const std::vector<Task>& taskList);
 
 #endif

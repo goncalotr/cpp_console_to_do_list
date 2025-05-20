@@ -92,17 +92,7 @@ int main (int argc, char** argv) {
 
 				// task list
 				std::cout << "\n--- Mark Task as Completed ---\n";
-				for (size_t i = 0; i < tasks.size(); ++i) {
-					const Task currentTask = tasks[i];
-					std::cout << (i + 1) << ". ";
-					if (currentTask.getCompleted()) {
-						std::cout << "✅ ";
-					} else {
-						std::cout << "❌ ";
-					}
-					std::cout << currentTask.getDescription() << std::endl;
-				}
-				std::cout << "-----------------------------\n";
+				displayTasks(tasks);
 
 				// input operation number
 				//int taskNumber;
@@ -153,17 +143,7 @@ int main (int argc, char** argv) {
 
 				// task list
 				std::cout << "\n--- Select Task to Remove ---\n";
-				for (size_t i = 0; i < tasks.size(); ++i) {
-					const Task currentTask = tasks[i];
-					std::cout << (i + 1) << ". ";
-					if (currentTask.getCompleted()) {
-						std::cout << "✅ ";
-					} else {
-						std::cout << "❌ ";
-					}
-					std::cout << currentTask.getDescription() << std::endl;
-				}
-				std::cout << "-----------------------------\n";
+				displayTasks(tasks);
 
 				// input operation number
 				//int taskNumber;
