@@ -74,6 +74,10 @@ int main (int argc, char** argv) {
 				handleLoadTasks(tasks, FILENAME);
 				break;
 
+			case 8:
+				handleEditDescription(tasks);
+				break;
+
 			// exit program
 			case 0:
 				std::cout << "Exiting program." << std::endl;

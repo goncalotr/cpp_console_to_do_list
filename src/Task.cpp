@@ -16,6 +16,11 @@ bool Task::getCompleted() const {
 	return completed;
 }
 
+// setters
+void Task::setDescription(const std::string& newDescription) {
+	description = newDescription;
+}
+
 void Task::setComplete() {
 	completed = true;
 }

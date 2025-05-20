@@ -16,6 +16,7 @@ class Task {
 		bool getCompleted() const;
 
 		// Method declarations - setters
+		void setDescription(const std::string& newDescription);
 		void setComplete();
 		void setIncomplete();
 
