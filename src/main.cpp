@@ -30,6 +30,14 @@ int main (int argc, char** argv) {
 		std::system("clear");
 		displayMenu();
 		std::cin >> choice;
+
+		// check for eof
+		if (std::cin.eof()) {
+			std::cout << "\nEOF detected. Exiting program..." << std::endl;
+			break;
+		}
+
+		// verify input
 		if (std::cin.fail()) {
 			std::cout << "Invalid input. Please enter a number. \n";
 			std::cin.clear(); // clear error flags
@@ -39,6 +47,7 @@ int main (int argc, char** argv) {
 		}
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
+		// select option
 		switch (choice) {
 
 			// add task
