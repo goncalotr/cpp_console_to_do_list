@@ -37,7 +37,7 @@ int clearConsole() {
 }
 
 void displayMenu() {
-	std::cout << "---  To-Do List Menu  ---" << std::endl;
+	std::cout << COLOR_CYAN << "---  To-Do List Menu  ---" << COLOR_RESET << std::endl;
 	std::cout << "1. Add Task" << std::endl;
 	std::cout << "2. View Tasks" << std::endl;
 	std::cout << "3. Mark Task as Completed" << std::endl;
@@ -46,14 +46,14 @@ void displayMenu() {
 	std::cout << "6. Save Tasks to File" << std::endl;
 	std::cout << "7. Load Tasks to File Task" << std::endl;
 	std::cout << "0. Exit" << std::endl;
-	std::cout << "---     Menu End      ---" << std::endl << std::endl;
+	std::cout << COLOR_CYAN << "-------------------------" << COLOR_RESET << std::endl;
 }
 
 void displayTasks(const std::vector<Task>& taskList) {
-	std::cout << "\n--- Current Task List ---\n";
+	std::cout << COLOR_CYAN << "\n--- Current Task List ---\n" << COLOR_RESET;
 
 	if (taskList.empty()) {
-		std::cout << "No tasks yet!" <<
+		std::cout << "No tasks yet!" << std::endl;
 		return;
 	}
 
@@ -67,6 +67,4 @@ void displayTasks(const std::vector<Task>& taskList) {
 		}
 		std::cout << currentTask.getDescription() << std::endl;
 	}
-
-	std::cout << "-------------------------" << std::endl;
 }
