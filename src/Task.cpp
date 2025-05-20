@@ -4,16 +4,22 @@
 
 #include "./../inc/Task.hpp"
 
-Task::Task(const std::string& desc) : description(desc), completed(false) {
+Task::Task(const std::string& desc, const std::string& dueDateStr)
+	: description(desc), completed(false), dueDate(dueDateStr) {
 	// empty 
 }
 
+// getters
 std::string Task::getDescription() const {
 	return description;
 }
 
 bool Task::getCompleted() const {
 	return completed;
+}
+
+std::string Task::getDueDate() const {
+	return dueDate;
 }
 
 // setters
@@ -29,3 +35,6 @@ void Task::setIncomplete() {
 	completed = false;
 }
 
+void Task::setDueDate(const std::string& newDueDate) {
+	this->dueDate = newDueDate;
+}

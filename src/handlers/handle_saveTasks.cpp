@@ -21,8 +21,13 @@ void handleSaveTasks(const std::vector<Task>& tasks, const std::string& filename
 		const Task& current_task_element  = tasks[i];
 
 		bool completed = current_task_element.getCompleted();
+		std::string dueDate = current_task_element.getDueDate();
 		std::string description = current_task_element.getDescription();
-		outFile << (completed ? '1' : '0') << "|" << description << '\n';
+
+		outFile << (completed ? '1' : '0')	<< "|" 
+											<< dueDate << "|"
+											<< description
+											<< std::endl;
 	}
 
 	// close file

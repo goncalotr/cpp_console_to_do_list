@@ -23,9 +23,14 @@ void handleViewTasks(const std::vector<Task>& tasks) {
 			}
 
 			std::cout << currentTask.getDescription() << std::endl;
+
+			if (!currentTask.getDueDate().empty()) {
+				std::cout << " (Due: " << currentTask.getDueDate() << ")";
+			}
+			std::cout << std::endl;
 		}
 	}
 
-	std::cout  << " ------------------ " << std::endl;
+	std::cout << " ------------------ " << std::endl;
 	waitForEnter();
 }
