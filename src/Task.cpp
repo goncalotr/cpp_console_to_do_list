@@ -9,6 +9,10 @@ Task::Task(const std::string& desc, const std::string& dueDateStr)
 	// empty 
 }
 
+Task::~Task() {
+	// empty
+}
+
 // getters
 std::string Task::getDescription() const {
 	return description;

@@ -10,6 +10,9 @@ class Task {
 		// Constructor declaration
 		Task(const std::string& desc, const std::string& dueDate = "");
 
+		// Destructor
+		~Task();
+
 		// Method declarations - getters
 		// const at end -> this method doesn't modify the object's state
 		std::string getDescription() const;
