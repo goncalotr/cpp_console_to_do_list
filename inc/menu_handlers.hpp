@@ -3,6 +3,8 @@
 #ifndef MENU_HANDLERS_HPP
 #define MENU_HANDLERS_HPP
 
+#include <fstream>				// For std::ofstream
+
 #include "program.hpp"
 #include "Task.hpp"
 
