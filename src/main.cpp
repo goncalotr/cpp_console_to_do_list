@@ -39,89 +39,23 @@ int main (int argc, char** argv) {
 
 		int taskNumber;
 		switch (choice) {
-			case 1: {
+
+			// add task
+			case 1:
 				handleAddTask(tasks);
 				break;
-			}
+
+			// view tasks
 			case 2:
-				std::cout  << " --- Your Tasks --- " << std::endl;
-				loadingAnimation(500);
-
-				if (tasks.empty()) {
-					std::cout << "No tasks yet!" << std::endl;
-				} else {
-
-					for (size_t i = 0; i < tasks.size(); ++i) {
-						// getting reference to task to not copy it
-						// const because we are only reading not changing
-						const Task& currentTask = tasks[i];
-						std::cout << (i + 1) << ". ";
-
-						if (currentTask.getCompleted()) { 
-							std::cout << "✅ ";
-						} else {
-							std::cout << "❌ ";
-						}
-
-						std::cout << currentTask.getDescription() << std::endl;
-					}
-				}
-
-				std::cout  << " ------------------ " << std::endl;
-				waitForEnter();
+				handleViewTasks(tasks);
 				break;
 
+			// mark completed
 			case 3:
-
-				// no tasks
-				if (tasks.empty()) {
-					std::cout << "No tasks to mark. Add some tasks first!\n";
-					waitForEnter();
-					break;
-				}
-
-				// task list
-				std::cout << "\n--- Mark Task as Completed ---\n";
-				displayTasks(tasks);
-
-				// input operation number
-				//int taskNumber;
-				std::cout << "Enter the number of the task to mark as completed (or 0 to cancel): ";
-				std::cin >> taskNumber;
-				if (std::cin.fail()) {
-					std::cout << "Invalid input. Please enter a number. \n";
-					std::cin.clear();
-					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-					waitForEnter();
-					break;
-				}
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-				if (taskNumber == 0) {
-					std::cout << "Operation cancelled.\n";
-					waitForEnter();
-					break;
-				}
-
-				// validate option
-				if (taskNumber > 0 && static_cast<size_t>(taskNumber) <= tasks.size()) {
-
-					// non-const reference because the task will be modified
-					Task& taskToMark = tasks[taskNumber - 1];
-
-					if (taskToMark.getCompleted()) {
-						std::cout << "Task \"" << taskToMark.getDescription() << "\" is already marked as completed. \n";
-					} else {
-						taskToMark.setComplete();
-						std::cout << "Task \"" << taskToMark.getDescription() << "\" marked as completed! \n";
-					}
-				} else {
-					std::cout << "Invalid task number. Please enter a number from the list. \n";
-				}
-
-				waitForEnter();
+				handleMarkTaskCompleted(tasks);
 				break;
 
+			// remove tasks
 			case 4:
 
 				// no tasks
@@ -167,18 +101,22 @@ int main (int argc, char** argv) {
 				waitForEnter();
 				break;
 
+			// save tasks
 			case 5:
 				std::cout << "Saving tasks..." << std::endl;
 				break;
 
+			// load tasks
 			case 6:
 				std::cout << "Loading tasks..." << std::endl;
 				break;
 
+			// exit program
 			case 0:
 				std::cout << "Exiting program." << std::endl;
 				break;
 
+			// option not valid
 			default:
 				std::cout << "Invalid choice. Please try again." << std::endl;
 
