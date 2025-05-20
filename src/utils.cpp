@@ -36,8 +36,26 @@ int clearConsole() {
 	return 0;
 }
 
+void displayMenu() {
+	std::cout << "---  To-Do List Menu  ---" << std::endl;
+	std::cout << "1. Add Task" << std::endl;
+	std::cout << "2. View Tasks" << std::endl;
+	std::cout << "3. Mark Task as Completed" << std::endl;
+	std::cout << "4. Mark Task as Not Complete" << std::endl;
+	std::cout << "5. Remove Task"<< std::endl;
+	std::cout << "6. Save Tasks to File" << std::endl;
+	std::cout << "7. Load Tasks to File Task" << std::endl;
+	std::cout << "0. Exit" << std::endl;
+	std::cout << "---     Menu End      ---" << std::endl << std::endl;
+}
+
 void displayTasks(const std::vector<Task>& taskList) {
 	std::cout << "\n--- Current Task List ---\n";
+
+	if (taskList.empty()) {
+		std::cout << "No tasks yet!" <<
+		return;
+	}
 
 	for (size_t i = 0; i < taskList.size(); ++i) {
 		const Task currentTask = taskList[i];
@@ -50,5 +68,5 @@ void displayTasks(const std::vector<Task>& taskList) {
 		std::cout << currentTask.getDescription() << std::endl;
 	}
 
-	std::cout << "\n-------------------------\n";
+	std::cout << "-------------------------" << std::endl;
 }

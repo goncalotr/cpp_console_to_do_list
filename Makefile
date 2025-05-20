@@ -17,6 +17,7 @@ SRCS		= src/main.cpp \
 			  src/handlers/handle_removeTasks.cpp \
 			  src/handlers/handle_saveTasks.cpp \
 			  src/handlers/handle_loadTasks.cpp \
+			  src/handlers/handler_utils.cpp \
 			  src/Task.cpp \
 			  src/utils.cpp
 

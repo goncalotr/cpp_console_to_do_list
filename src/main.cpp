@@ -4,19 +4,6 @@
 
 const std::string FILENAME = "tasks.txt";
 
-void displayMenu() {
-	std::cout << std::endl << "--- To-Do List Menu ---"<< std::endl;
-	std::cout << std::endl << "1. Add Task"<< std::endl;
-	std::cout << std::endl << "2. View Tasks"<< std::endl;
-	std::cout << std::endl << "3. Mark Task as Completed"<< std::endl;
-	std::cout << std::endl << "4. Remove Task"<< std::endl;
-	std::cout << std::endl << "5. Save Tasks to File"<< std::endl;
-	std::cout << std::endl << "6. Load Tasks to File Task"<< std::endl;
-	std::cout << std::endl << "0. Exit" << std::endl;
-	std::cout << std::endl << "--- Menu End ---"<< std::endl << std::endl;
-	std::cout << std::endl << "Enter your choice: ";
-}
-
 int main (int argc, char** argv) {
 
 	(void) argc;
@@ -28,7 +15,9 @@ int main (int argc, char** argv) {
 
 	do {
 		std::system("clear");
+		displayTasks(tasks);
 		displayMenu();
+		std::cout << std::endl << "Enter your choice: ";
 		std::cin >> choice;
 
 		// check for eof
@@ -65,18 +54,23 @@ int main (int argc, char** argv) {
 				handleMarkTaskCompleted(tasks);
 				break;
 
-			// remove tasks
+			// mark not completed
 			case 4:
+				handleMarkTaskNotCompleted(tasks);
+				break;
+
+			// remove tasks
+			case 5:
 				handleRemoveTask(tasks);
 				break;
 
 			// save tasks
-			case 5:
+			case 6:
 				handleSaveTasks(tasks, FILENAME);
 				break;
 
 			// load tasks
-			case 6:
+			case 7:
 				handleLoadTasks(tasks, FILENAME);
 				break;
 
