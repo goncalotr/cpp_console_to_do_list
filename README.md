@@ -4,7 +4,7 @@ A simple, console-based To-Do List application written in C++ as a learning proj
 This application allows users to manage their tasks directly from the command line.
 
 <p align="center">
-	<img src=https://github.com/goncalotr/cpp_console_to_do_list/blob/main/Screenshot.png>
+	<src=https://github.com/goncalotr/cpp_console_to_do_list/blob/main/Screenshot.png>
 </p>
 
 ## Features
