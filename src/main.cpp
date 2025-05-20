@@ -2,6 +2,8 @@
 
 #include "./../inc/program.hpp"
 
+const std::string FILENAME = "tasks.txt";
+
 void displayMenu() {
 	std::cout << std::endl << "--- To-Do List Menu ---"<< std::endl;
 	std::cout << std::endl << "1. Add Task"<< std::endl;
@@ -61,12 +63,12 @@ int main (int argc, char** argv) {
 
 			// save tasks
 			case 5:
-				std::cout << "Saving tasks..." << std::endl;
+				handleSaveTasks(tasks, FILENAME);
 				break;
 
 			// load tasks
 			case 6:
-				std::cout << "Loading tasks..." << std::endl;
+				handleLoadTasks(tasks, FILENAME);
 				break;
 
 			// exit program
