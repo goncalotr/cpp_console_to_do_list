@@ -11,6 +11,7 @@ endif
 
 # --- Files ---
 SRCS		= src/main.cpp \
+			  src/handlers/handle_addTask.cpp \
 			  src/Task.cpp \
 			  src/utils.cpp
 
