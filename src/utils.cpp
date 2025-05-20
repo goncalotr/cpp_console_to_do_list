@@ -46,6 +46,7 @@ void displayMenu() {
 	std::cout << "6. Save Tasks to File" << std::endl;
 	std::cout << "7. Load Tasks from File" << std::endl;
 	std::cout << "8. Edit Description" << std::endl;
+	std::cout << "9. Sort Tasks" << std::endl;
 	std::cout << "0. Exit" << std::endl;
 	std::cout << COLOR_CYAN << "-------------------------" << COLOR_RESET << std::endl;
 }

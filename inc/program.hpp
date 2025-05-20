@@ -13,6 +13,8 @@
 #include <ctime>
 #include <limits>
 
+#include <algorithm> // For std::sort
+
 #include "Task.hpp"
 #include "menu_handlers.hpp"
 
@@ -38,6 +40,7 @@
 // --- Functions ---
 
 // Handler Utils
+bool checkTaskListEmpty(std::vector<Task>& tasks, const std::string& operationName);
 
 // Utils
 void		delay(int ms);

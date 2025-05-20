@@ -2,10 +2,12 @@
 
 #include "./../../inc/program.hpp"
 
-void checkTasksExist(std::vector<Task>& tasks) {
+bool checkTaskListEmpty(std::vector<Task>& tasks, const std::string& operationName) {
 	if (tasks.empty()) {
-		std::cout << "No tasks to mark. Add some tasks first!\n";
+		std::cout << "No tasks to " << operationName << ". Add some tasks first!\n";
 		waitForEnter();
-		return;
+		return false;
 	}
+
+	return true;
 }

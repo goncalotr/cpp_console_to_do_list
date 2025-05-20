@@ -19,4 +19,6 @@ void handleEditDescription(std::vector<Task>& tasks);
 void handleSaveTasks(const std::vector<Task>& tasks, const std::string& filename);
 void handleLoadTasks(std::vector<Task>& tasks, const std::string& filename);
 
+void handleSortTasks(std::vector<Task>& tasks);
+
 #endif

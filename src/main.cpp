@@ -78,6 +78,10 @@ int main (int argc, char** argv) {
 				handleEditDescription(tasks);
 				break;
 
+			case 9:
+				handleSortTasks(tasks);
+				break;
+
 			// exit program
 			case 0:
 				std::cout << "Exiting program." << std::endl;
