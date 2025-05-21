@@ -20,6 +20,19 @@ This application allows users to manage their tasks directly from the command li
 	- Save the current list of tasks to a file (`tasks.txt` by default).
 	- Load tasks from the file when the application starts or via a menu option.
 
+## C++ Concepts Practiced
+
+This project was developed to practice and understand various C++ features, including:
+- Basic C++ Syntax & Control Flow (loops, conditionals)
+- Functions and Modular Design
+- Classes and Objects (for `Task` representation)
+- Standard Library Containers (`std::vector`)
+- Standard Library Strings (`std::string` manipulation)
+- Standard Library Algorithms (`std::sort` with custom comparators/lambdas)
+- File I/O (`std::ofstream`, `std::ifstream` for saving and loading)
+- Input/Output Streams (`std::cin`, `std::cout`, `std::cerr`)
+- Error Handling (input validation, EOF handling)
+
 ## Getting Started
 
 ### Build

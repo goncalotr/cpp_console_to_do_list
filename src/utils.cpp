@@ -39,14 +39,14 @@ int clearConsole() {
 void displayMenu() {
 	std::cout << COLOR_CYAN << "---  To-Do List Menu  ---" << COLOR_RESET << std::endl;
 	std::cout << "1. Add Task" << std::endl;
-	std::cout << "2. View Tasks" << std::endl;
+	std::cout << "2. Remove Task"<< std::endl;
 	std::cout << "3. Mark Task as Completed" << std::endl;
 	std::cout << "4. Mark Task as Not Complete" << std::endl;
-	std::cout << "5. Remove Task"<< std::endl;
-	std::cout << "6. Save Tasks to File" << std::endl;
-	std::cout << "7. Load Tasks from File" << std::endl;
-	std::cout << "8. Edit Description" << std::endl;
-	std::cout << "9. Sort Tasks" << std::endl;
+	std::cout << "5. Edit Description" << std::endl;
+	std::cout << "6. Sort Tasks" << std::endl;
+	std::cout << "7. Save Tasks to File" << std::endl;
+	std::cout << "8. Load Tasks from File" << std::endl;
+	std::cout << "9. View Tasks" << std::endl;
 	std::cout << "0. Exit" << std::endl;
 	std::cout << COLOR_CYAN << "-------------------------" << COLOR_RESET << std::endl;
 }

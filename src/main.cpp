@@ -44,9 +44,9 @@ int main (int argc, char** argv) {
 				handleAddTask(tasks);
 				break;
 
-			// view tasks
+			// remove tasks
 			case 2:
-				handleViewTasks(tasks);
+				handleRemoveTask(tasks);
 				break;
 
 			// mark completed
@@ -59,27 +59,27 @@ int main (int argc, char** argv) {
 				handleMarkTaskNotCompleted(tasks);
 				break;
 
-			// remove tasks
 			case 5:
-				handleRemoveTask(tasks);
+				handleEditDescription(tasks);
+				break;
+
+			case 6:
+				handleSortTasks(tasks);
 				break;
 
 			// save tasks
-			case 6:
+			case 7:
 				handleSaveTasks(tasks, FILENAME);
 				break;
 
 			// load tasks
-			case 7:
+			case 8:
 				handleLoadTasks(tasks, FILENAME);
 				break;
 
-			case 8:
-				handleEditDescription(tasks);
-				break;
-
+			// view tasks
 			case 9:
-				handleSortTasks(tasks);
+				handleViewTasks(tasks);
 				break;
 
 			// exit program
